@@ -304,6 +304,11 @@ namespace v2rayN.ViewModels
             }
         }
 
+        public void AutofitColumnWidth()
+        {
+            _updateView?.Invoke(EViewAction.AdjustMainLvColWidth, null);
+        }
+
         #endregion Actions
 
         #region Servers && Groups
@@ -612,6 +617,7 @@ namespace v2rayN.ViewModels
             }
             if (indexId == _config.indexId)
             {
+                RefreshServers();
                 Reload();
             }
             else
