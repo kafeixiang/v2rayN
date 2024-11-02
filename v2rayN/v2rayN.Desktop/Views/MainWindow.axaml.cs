@@ -34,7 +34,6 @@ namespace v2rayN.Desktop.Views
             this.Closing += MainWindow_Closing;
             this.KeyDown += MainWindow_KeyDown;
             menuSettingsSetUWP.Click += menuSettingsSetUWP_Click;
-            menuPromotion.Click += menuPromotion_Click;
             menuClose.Click += menuClose_Click;
             menuCheckUpdate.Click += MenuCheckUpdate_Click;
             menuBackupAndRestore.Click += MenuBackupAndRestore_Click;
