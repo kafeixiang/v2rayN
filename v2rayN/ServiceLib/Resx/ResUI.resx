@@ -1363,4 +1363,10 @@
   <data name="TbSettingsCurrentFontFamilyLinuxTip" xml:space="preserve">
     <value>Install the font to the system and restart the settings</value>
   </data>
+  <data name="menuExitTips" xml:space="preserve">
+    <value>Are you sure to exit?</value>
+  </data>
+  <data name="LvMemo" xml:space="preserve">
+    <value>Remarks Memo</value>
+  </data>
 </root>
