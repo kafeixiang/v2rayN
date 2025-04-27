@@ -8,7 +8,7 @@ public static class ProcUtils
 
     public static void ProcessStart(string? fileName, string arguments = "")
     {
-        ProcessStart(fileName, arguments, null);
+        _ = ProcessStart(fileName, arguments, null);
     }
 
     public static int? ProcessStart(string? fileName, string arguments, string? dir)
@@ -20,9 +20,13 @@ public static class ProcUtils
         try
         {
             if (fileName.Contains(' '))
+            {
                 fileName = fileName.AppendQuotes();
+            }
             if (arguments.Contains(' '))
+            {
                 arguments = arguments.AppendQuotes();
+            }
 
             Process proc = new()
             {
@@ -34,7 +38,7 @@ public static class ProcUtils
                     WorkingDirectory = dir ?? string.Empty
                 }
             };
-            proc.Start();
+            _ = proc.Start();
             return dir is null ? null : proc.Id;
         }
         catch (Exception ex)
@@ -56,7 +60,7 @@ public static class ProcUtils
                 FileName = Utils.GetExePath().AppendQuotes(),
                 Verb = blAdmin ? "runas" : null,
             };
-            Process.Start(startInfo);
+            _ = Process.Start(startInfo);
         }
         catch (Exception ex)
         {
@@ -134,7 +138,9 @@ public static class ProcUtils
         fileName = null;
         processName = null;
         if (!review)
+        {
             return;
+        }
         try
         {
             procId = proc?.Id;
